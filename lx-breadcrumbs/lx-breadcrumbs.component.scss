@@ -1,0 +1,49 @@
+@import './themes/lexus-theme';
+
+@mixin breadcrumbs-theme($background) {
+  .breadcrumbs {
+    padding: 15px;
+    background: $background !important;
+
+    li {
+      display: inline;
+      list-style-type: none;
+    }
+
+    ul {
+      margin: 0px;
+    }
+
+    a {
+      padding: 0px;
+    }
+
+    a:hover, a.active {
+      color: map_get($lexus-primary, 500);
+    }
+
+
+    .spacer {
+      padding-right: 8px;
+    }
+
+    .mat-toolbar {
+      background: none !important;
+      color: map_get($mat-grey, 900);
+    }
+
+    .mat-toolbar-row, .mat-toolbar-single-row {
+      display: inline;
+      padding: 0px;
+      white-space: normal;
+    }
+
+    .mat-toolbar-row, .mat-toolbar-single-row ul{
+      padding: 0px;
+    }
+  }
+}
+
+
+
+

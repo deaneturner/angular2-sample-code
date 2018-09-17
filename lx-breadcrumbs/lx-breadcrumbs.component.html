@@ -1,0 +1,18 @@
+<div class="container-fluid breadcrumbs">
+    <div class="col-xs-12">
+      <mat-toolbar>
+        <ul>
+          <li class="mat-caption"><a [routerLink]="['/']" routerLinkActive="active">Home</a></li>
+          <li class="mat-caption" *ngFor="let crumb of breadcrumbs; let first = first; let last = last">
+            <span class="spacer" [hidden]="!first"> / </span>
+            <span [hidden]="!crumb.nonRoutable && !last">{{ crumb.text }}</span>
+            <a [hidden]="last || crumb.nonRoutable" [routerLink]="[crumb.route]">{{ crumb.text }}</a>
+            <span class="spacer" [hidden]="last"> / </span>
+          </li>
+        </ul>
+      </mat-toolbar>
+    </div>
+</div>
+
+
+
